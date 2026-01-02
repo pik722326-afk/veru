@@ -11,11 +11,23 @@
     if n == 0:
         return 0
     h = [F(s __ , n-1), F(s __ , n-1), F(s __ , n-1)]
-    return any(h) if (n - 1) % 2 == 0 else all(h)  # else any(h)
+    return any(h) if (n - 1) % 2 == 0 else all(h)  # else any(h) - all Выйгрыш ani - проигрыш
 
 print([s for s in range(1, __ +1) if F(s, n=2)])
 print([s for s in range(1, __ +1) if F(s, n=3) and not F(s, n=1)])
 print([s for s in range(1, __ +1) if F(s, n=4) and not F(s, n=2)])"""
+#Шаблон решения 2 кучи
+"""def F(a, s, n):
+    if a + s >= __ : #+-*/ Смотреть по условию 
+        return n % 2 == 0
+    if n == 0:
+        return 0
+    h = [F(а__, s , n-1), F(a, s__, n-1), F(a__, s , n-1), F(a, s__, n-1)]
+    return any(h) if (n - 1) % 2 == 0 else all(h)  # else any(h)
+
+print([s for s in range(_, 1000+1) if F(7, s, n=2)]) Если куча убывает то от 1000 до значения победы 
+print([s for s in range(1, __+1) if F(7, s, n=3) and not F(7, s, n=1)]) Если куча возрастает то от 1 до значения победы 
+print([s for s in range(_, __+1) if F(7, s, n=4) and not F(7, s, n=2)])"""
 
 #Пример решения задачи на 1 кучу (возрастание):
 """#Открытый вариант 2025 (Уровень: Базовый)

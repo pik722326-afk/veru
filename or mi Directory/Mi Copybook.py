@@ -234,3 +234,49 @@ print(int('3B9ACA00', 16))  # 10**9
 print(convert(n, 3))  # 2120200200021010001
 print(int('2120200200021010001', 3)) # 10**9 
 """
+
+#КЕГЭ № 8506 Апробация 17.05 (Уровень: Базовый)
+"""
+def F(s, n):
+    if s >= 55 :
+        return n % 2 == 0
+    if n == 0:
+        return 0
+    h = [F(s + 1 , n-1), F(s +4, n-1), F(s * 3, n-1)]
+    return any(h) if (n - 1) % 2 == 0 else all(h)  # else any(h)
+
+print([s for s in range(1, 66 +1) if F(s, n=2)])
+print([s for s in range(1, 66 +1) if F(s, n=3) and not F(s, n=1)])
+print([s for s in range(1, 66 +1) if F(s, n=4) and not F(s, n=2)])
+"""
+
+
+
+#КЕГЭ № 17638 Основная волна 19.06.24 (Уровень: Базовый)
+"""
+def F(s, n):
+    if s >= 39 :
+        return n % 2 == 0
+    if n == 0:
+        return 0
+    h = [F(s + 1, n-1), F(s + 3, n-1), F(s * 2, n-1)]
+    return any(h) if (n - 1) % 2 == 0 else all(h)  # else any(h)
+
+print([s for s in range(1, 39 +1) if F(s, n=2)])
+print([s for s in range(1, 39 +1) if F(s, n=3) and not F(s, n=1)])
+print([s for s in range(1, 39 +1) if F(s, n=4) and not F(s, n=2)])"""
+
+#КЕГЭ № 8594 (Уровень: Базовый)
+#https://stepik.org/lesson/1038794/step/4?unit=1062789
+def F(a, s, n):
+    if a * s >= 455 : #+-*/ Смотреть по условию
+        return n % 2 == 0
+    if n == 0:
+        return 0
+    h = [F(a + 1, s , n-1), F(a, s + 1, n-1), F(a * 2, s , n-1), F(a, s * 2, n-1)]
+    return any(h) if (n - 1) % 2 == 0 else all(h)  # else any(h)
+
+print([s for s in range(1, 90+1) if F(5, s, n=2)])
+print([s for s in range(1, 90+1) if F(5, s, n=3) and not F(5, s, n=1)])
+print([s for s in range(1, 90+1) if F(5, s, n=4) and not F(5, s, n=2)])
+
