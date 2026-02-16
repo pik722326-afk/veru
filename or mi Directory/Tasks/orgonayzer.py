@@ -2,13 +2,12 @@ import os
 import shutil
 
 FILE_CATEGORIES = {
-    "Images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff"],
-    "Videos": [".mp4", ".mkv", ".flv", ".avi", ".mov"],
-    "Documents": [".pdf", ".doc", ".docx", ".txt", ".ppt", ".pptx", ".xls", ".xlsx"],
+    "Фото": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff"],
+    "Видео": [".mp4", ".mkv", ".flv", ".avi", ".mov"],
+    "Документы": [".pdf", ".doc", ".docx", ".txt", ".ppt", ".pptx", ".xls", ".xlsx"],
     "Audio": [".mp3", ".wav", ".aac", ".flac"],
-    "Archives": [".zip", ".rar", ".7z", ".tar", ".gz"],
+    "Архивы": [".zip", ".rar", ".7z", ".tar", ".gz"],
     "Data": [".csv", ".json", ".xml"],
-    "Others": []
 }
 
 def organize_files(directory):
