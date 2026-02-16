@@ -18,7 +18,7 @@ for p in permutations('ABCDEFG'):d
 
 
 
-#[1, 2, 3, 5, 6, 7, 8, 11, 13, 14, 15, 16, 19-21, 23]
+#[1, 2, 3, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 19-21, 23, 25 ]
 '''
 Запустите бота: https://t.me/ilandroxxy_bot и нажмите кнопку: "📚 Получить конспект"
 '''
@@ -27,3 +27,7 @@ for p in permutations('ABCDEFG'):d
 # Домашка 1 номер: https://stepik.org/lesson/1038531/step/1?unit=1062781
 
 # Практика 1 номер: https://stepik.org/lesson/1208227/step/1?unit=1221448
+
+
+x = 149587
+print (x)[::1]

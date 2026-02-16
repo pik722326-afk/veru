@@ -268,7 +268,7 @@ print([s for s in range(1, 39 +1) if F(s, n=4) and not F(s, n=2)])"""
 
 #КЕГЭ № 8594 (Уровень: Базовый)
 #https://stepik.org/lesson/1038794/step/4?unit=1062789
-def F(a, s, n):
+"""def F(a, s, n):
     if a * s >= 455 : #+-*/ Смотреть по условию
         return n % 2 == 0
     if n == 0:
@@ -279,4 +279,4 @@ def F(a, s, n):
 print([s for s in range(1, 90+1) if F(5, s, n=2)])
 print([s for s in range(1, 90+1) if F(5, s, n=3) and not F(5, s, n=1)])
 print([s for s in range(1, 90+1) if F(5, s, n=4) and not F(5, s, n=2)])
-
+"""
