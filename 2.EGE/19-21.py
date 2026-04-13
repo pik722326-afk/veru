@@ -176,6 +176,37 @@ print ([s for s in range (1, 66 + 1) if F(s, n = 4) and not F(s, n = 2)])"""
 
 
 
+#Пример решения задачи на 2 кучи (возрастание):
+"""# № 20907 Апробация 05.03.25 (Уровень: Базовый)
+# 2 кучи: a+1, s+1, a*2, s*2 | a+s >= 81 | a=7 | 1 ≤ s ≤ 73
+def F(a, s, n):
+    if a + s >= 81 :
+        return n % 2 == 0
+    if n == 0:
+        return 0
+    h = [F(a+1, s , n-1), F(a, s+1, n-1), F(a*2, s , n-1), F(a, s*2, n-1)]
+    return any(h) if (n - 1) % 2 == 0 else all(h)  # else any(h)
+
+print([s for s in range(1, 73+1) if F(7, s, n=2)])
+print([s for s in range(1, 73+1) if F(7, s, n=3) and not F(7, s, n=1)])
+print([s for s in range(1, 73+1) if F(7, s, n=4) and not F(7, s, n=2)])
+"""
+
+#№ 27774 Апробация 04.03.26 (Уровень: Базовый)
+"""# 2 кучи: a+1, s+1, a*2, s*2 | a+s >= 207 | a=17 | 1 ≤ s ≤ 189
+def F(a, s, n):
+    if a + s >= 207:
+        return n % 2 == 0
+    if n == 0:
+        return 0
+    h = [F(a+1, s , n-1), F(a, s+1, n-1), F(a*2, s , n-1), F(a, s*2, n-1)]
+    return any(h) if (n - 1) % 2 == 0 else all(h)
+
+print ([s for s in range(1, 189+1) if F(17, s, n=2)])
+print ([s for s in range(1, 189+1) if F(17, s, n=3) and not F(17, s, n=1)])
+print ([s for s in range(1, 189+1) if F(17, s, n=4) and not F(17, s, n=2)])"""
+
+
 
 
 

@@ -127,7 +127,7 @@ for p in product('АЕКНС', repeat=6):
         print(cnt)
 """
 
-
+"""
 RES = []
 from itertools import product
 cnt = 0
@@ -136,7 +136,7 @@ for p in product(sorted('ПЯТЬДНЕЙ'), repeat=4):
     word = ''.join(p)
     if (not word ["П","Т","Д","Н","Й","Ь"]):
         cnt += 1
-        print (cnt, word)
+        print (cnt, word)"""
 #птднй
 #ПТДНЙ
 #valid = [w for w in words if not any(ch in vowels for ch in w) and len(set(w)) == 4]
@@ -147,11 +147,97 @@ for p in permutations('ПЯТЬДНЕЙ', r=4):
     if word == (not "ПТДНЙ"):
         print(word)"""
 
-# endregion Разобрать: *************************************************************
-# #
-# #
-# ФИПИ = [2, 5, 6, 8, 13, 14]
 
-# Домашка 8 номер: https://stepik.org/lesson/1038667/step/1?unit=1062772
 
-# Практика 8 номер: https://stepik.org/lesson/1227099/step/1?unit=1240617
+#КЕГЭ № 16374 ЕГКР 27.04.24 (Уровень: Базовый)
+#Сколько существует семизначных семеричных чисел,
+#которые содержат в своей записи ровно две чётные цифры?
+"""from itertools import product
+cnt = 0
+cnt2 = 0
+for p in product('0123456', repeat=7):
+    num = ''.join(p)
+    if num[0] != '0':
+        if sum(y in '0246' for y in num) == 2:
+            cnt += 1
+print(cnt)"""
+
+
+#№ 16319 Открытый вариант 2024 (Уровень: Базовый)
+"""from itertools import product
+n = 0
+R = []
+for p in product(sorted('ПАРУС'), repeat=5):
+    n += 1
+    word = ''.join(p)
+    if word.count('У') <= 1:
+        if 'АА' not in word:
+            R.append(n)
+print(max(R))"""
+
+#КЕГЭ № 12917  (Уровень: Базовый)
+"""
+from itertools import permutations
+R = []
+for p in permutations('ПРОСТО', r=6):
+    word = ''.join(p)
+    if 'ОО' not in word:
+        R.append(word)
+print (len(set(R)))"""
+
+#№ 12240 ЕГКР 16.12.23 (Уровень: Базовый)
+"""
+from itertools import product
+cnt = 0
+for p in product('012345678', repeat=5):
+    num = ''.join(p)
+    if num[0] != '0':
+        if num.count('5') == 1:
+            if all (x not in num for x in "00 11 22 33 44 55 66 77 88".split()):
+                cnt += 1
+print(cnt)"""
+
+#КЕГЭ № 12097 (Уровень: Базовый)
+"""
+from itertools import product
+cnt = 0
+R = []
+for p in product(sorted('ГИРЛЯНДА'), repeat=6):
+    word = ''.join(p)
+    cnt += 1
+    if word.count("Д") == 3:
+        if "Я" != word[0]:
+            if cnt % 2 == 0:
+                R.append(cnt)
+print(max(R))"""
+
+#КЕГЭ № 11300 (Уровень: Базовый)
+"""
+from itertools import product
+cnt = 0
+R = []
+for p in product(sorted("ГОНДУБШ"), repeat=6):
+    word = ''.join(p)
+    cnt += 1
+    if word.count("Н") >=2:
+        if word.count("У") == 0:
+            if "Б" != word[0]:
+                if cnt % 2 != 0:
+                    R.append(cnt)
+print (max(R))"""
+
+from itertools import product
+cnt = 0
+R = []
+for p in product(sorted("БМЮРН"), repeat=6):
+    word = ''.join(p)
+    cnt += 1
+    if  word[0] != "М":
+        if word.count("Р") >= 2:
+            if word.count("Ю") == 0:
+                if cnt % 2 != 0:
+                    R.append(cnt)
+print (max(R))
+
+
+

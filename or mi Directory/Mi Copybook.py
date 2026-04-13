@@ -280,3 +280,83 @@ print([s for s in range(1, 90+1) if F(5, s, n=2)])
 print([s for s in range(1, 90+1) if F(5, s, n=3) and not F(5, s, n=1)])
 print([s for s in range(1, 90+1) if F(5, s, n=4) and not F(5, s, n=2)])
 """
+
+
+
+'''
+1. Ответ:75816
+Код:
+"""from itertools import product
+cnt = 0
+cnt2 = 0
+for p in product('0123456', repeat=7):
+    num = ''.join(p)
+    if num[0] != '0':
+        if sum(y in '0246' for y in num) == 2:
+            cnt += 1
+print(cnt)"""
+
+2. Ответ:2969
+Код:
+"""from itertools import product
+n = 0
+R = []
+for p in product(sorted('ПАРУС'), repeat=5):
+    n += 1
+    word = ''.join(p)
+    if word.count('У') <= 1:
+        if 'АА' not in word:
+            R.append(n)
+print(max(R))"""
+
+3. Ответ: 240
+Код:
+from itertools import permutations
+R = []
+for p in permutations('ПРОСТО', r=6):
+    word = ''.join(p)
+    if 'ОО' not in word:
+        R.append(word)
+print (len(set(R)))
+
+4. Oтвет: 13377
+Код:
+from itertools import product
+cnt = 0
+for p in product('012345678', repeat=5):
+    num = ''.join(p)
+    if num[0] != '0':
+        if num.count('5') == 1:
+            if all (x not in num for x in "00 11 22 33 44 55 66 77 88".split()):
+                cnt += 1
+print(cnt)
+
+5. Oтвет: 226456
+Код:
+from itertools import product
+cnt = 0
+R = []
+for p in product(sorted('ГИРЛЯНДА'), repeat=6):
+    word = ''.join(p)
+    cnt += 1
+    if word.count("Д") == 3:
+        if "Я" != word[0]:
+            if cnt % 2 == 0:
+                R.append(cnt)
+print(max(R))
+
+6. Oтвет: 117625
+Код:
+from itertools import product
+cnt = 0
+R = []
+for p in product(sorted("ГОНДУБШ"), repeat=6):
+    word = ''.join(p)
+    cnt += 1
+    if word.count("Н") >=2:
+        if word.count("У") == 0:
+            if "Б" != word[0]:
+                if cnt % 2 != 0:
+                    R.append(cnt)
+print (max(R))
+'''

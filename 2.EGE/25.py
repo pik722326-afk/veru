@@ -128,6 +128,61 @@ for x in range(750_000-1, -1, -1):
             cnt += 1
             if cnt == 5:
                 break"""
+
+"""
+def divisors(x):
+    d = []
+    for j in range(1, int(x ** 0.5) + 1):
+        if x % j == 0:
+            d.append(x)
+            d.append(x // j)
+    return sorted(set(d))
+
+for x in range(178965, 178982 + 1):
+    d = divisors(x)
+    if len(d) == 4:
+        print(sorted(d)[::-1])
+"""
 # Домашка 25 номер: https://stepik.org/lesson/1038816?unit=1062780
 
 # Практика 25 номер: https://stepik.org/lesson/1228669/step/1?unit=1242202
+
+# № # № 18148 (Уровень: Базовый) (Уровень: Базовый)
+"""cnt = 0
+def divisors(x):
+    d = []
+    for j in range(2, int(x**0.5)+1):
+        if x % j == 0:
+            d.append(j)
+            d.append(x//j)
+    return sorted(set(d))
+
+for x in range(900000+1,10**8):
+    d =  divisors(x)
+    if len(d) > 0:
+        M = min(d) + max(d)
+        if M % 100 == 46:
+            print(x, M)
+            cnt += 1
+            if cnt == 5:
+                break"""
+
+cnt = 0
+def divisors(x):
+    d = []
+    for j in range(1, int(x**0.5)+1):
+        if x % j == 0:
+            d.append(j)
+            d.append(x//j)
+    return sorted(set(d))
+
+for x in range(780000+1,10**8):
+    d =  divisors(x)
+    if len(d) > 0:
+        M = min(d) + max(d)
+        if M % 100 == 63:
+            if M % len(d)==0:
+                print(x, M)
+                cnt += 1
+                if cnt == 5:
+                    break
