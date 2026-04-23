@@ -318,6 +318,34 @@ for s in open("files/9_8554.csv"):
 print (cnt)"""
 
 
+#КЕГЭ № 11830 (Уровень: Средний)
+#– в строке есть два числа, каждое из которых повторяется дважды,
+#остальные три числа различны;
+#– произведение всех повторяющихся чисел строки
+#более чем вдвое превосходит произведение неповторяющихся чисел.
+cnt = 0
+from math import prod
+for s in open("files/9_11830.csv"):
+    M = [int(x) for x in s.split(";")]
+    copied1 = [x for x in M if M.count(x) == 2]
+    copied2 = [x for x in M if M.count(x) == 1]
+    if prod(copied1) > prod(copied2) * 2:
+        if len(copied1) == 4  and len(copied2) == 3:
+            cnt += 1
+print (cnt)
+
+#КЕГЭ № 9778 Основная волна 20.06.23 (Уровень: Средний)
+cnt = 0
+for s in open("files/9_9778.csv"):
+    M = [int(x) for x in s.split(";")]
+    cnt += 1
+    copied1 = [int (x) for x in M if M.count(x) == 2]
+    copied2 = [int (x) for x in M if M.count(x) == 1]
+    if len(copied1) == 2  and len(copied2) == 4:
+        if copied1[0] >= sum(copied2) / len(copied2) :
+            print (cnt)
+            break
+
 
 
 

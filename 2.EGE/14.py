@@ -188,7 +188,7 @@ print (max(k))
 """
 
 # № 227 (Уровень: Базовый)
-
+"""
 alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
 def convert(n, b):
     r = ''
@@ -199,10 +199,93 @@ def convert(n, b):
 f = 4**2015 + 2**2015 - 15
 s = convert(f, 2)
 s = s.count("1")
-print (s)
+print (s)"""
 
 
+#Домашка от жени
+"1"
+# № 17555 Основная волна 08.06.24 (Уровень: Базовый)
+"""
+k = []
+alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+def convert(n, b):
+    r = ''
+    while n > 0:
+        r += alp[n % b]
+        n //= b
+    return r[::-1]
+for x in range(1, 2030 + 1):
+    n = 7**91 + 7**160 - x
+    s = convert(n, 7)
+    if s.count('0') == 70:
+        k.append(x)
+print (max(k))
+"""
+"2"
+"""alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+def convert(n, b):
+    r = ''
+    while n > 0:
+        r += alp[n % b]
+        n //= b
+    return r[::-1]
+f = 3 * 3125 ** 9 +2 * 625 ** 8 - 4 * 625 ** 7 + 3 * 125 ** 6 - 2 * 25 ** 5 - 2024
+f = convert(f, 25)
+if f [0] != "0":
+    f = f.count('0')
+print (f)"""
+"""
+M = []
+alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+for x in alp[:32]:
+    A = int(f'931{x}964', 32)
+    B = int(f'4{x}51{x}1', 32)
+    C = int(f'2861{x}637', 32)
+    if (A + B + C) % 31 == 0:
+        M.append(x)
 
+A = int('931C964', 32)
+B = int('4C51C1', 32)
+C = int('2861C637', 32)
+
+print ((A + B + C) // 31)"""
+
+"""M = []
+alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+for x in alp[:19]:
+    A = int (f'98897{x}21', 19)
+    B = int (f'2{x}923', 19)
+    if (A + B) % 18 == 0:
+        M.append(x)
+c = max(M)
+print ((int(f'98897{c}21', 19)+ int (f'2{c}923', 19)) // 18)"""
+
+"""alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+def convert(n, b):
+    r = ''
+    while n > 0:
+        r += alp[n % b]
+        n //= b
+    return r[::-1]
+for x in range(1, 2030 + 1):
+    f = 6 ** 260 + 6 ** 160 + 6 ** 60 - x
+    s = convert(f, 6)
+    if s.count('0') == 202:
+        print(x)
+        break"""
+
+#№ 28935 ЕГКР 18.04.26 (Уровень: Базовый)
+"""
+alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+for x in alp[:23]:
+    A = int(f'761{x}035', 23)
+    B = int(f'338{x}932', 23)
+    if (A + B) % 22 == 0:
+        print(min(x))
+        
+A = int(f'761{8}035', 23)
+B = int(f'338{8}932', 23)
+print ((A + B) // 22)"""
 
 '''
 Запустите бота: https://t.me/ilandroxxy_bot и нажмите кнопку: "📚 Получить конспект"
