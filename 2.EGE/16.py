@@ -216,6 +216,47 @@ def F(n):
 print ((F(2024) // 16 - F(2023)) // F(2022))
 """
 
+#F(n) = 1 при n ≤ 3
+#F(n) = (n + 3) * F(n − 2), если n > 3
+#Чему равно значение выражения F(2028) / F(2024)?
+"""
+import sys
+sys.setrecursionlimit(10**8)
+
+def F(n):
+    if n <= 3:
+        return 1
+    if n > 3:
+        return (n + 3) * F(n - 2)
+print(F(2028) // F(2024))"""
+# answer 4120899
+
+"""import sys
+sys.setrecursionlimit(10**8)
+
+def F(n):
+    if n ** 0.5 == int (n ** 0.5) :
+        return n ** 0.5
+    else:
+        return F(n + 1) + 1
+print (int(F(4850) + F(5000)))"""
+# answer 232
+
+"""import sys
+sys.setrecursionlimit(10**8)
+def F(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 2
+    if n % 2 == 0 and n > 2:
+        return  int((n + F(n - 2)) / 5)
+    if n % 2 == 1 and n > 2:
+        return int((2*n + F(n - 1) + F(n - 2)) / 4)
+print (F(50))"""
+# answer 12
+
+
 
 '''
 Запустите бота: https://t.me/ilandroxxy_bot и нажмите кнопку: "📚 Получить конспект"

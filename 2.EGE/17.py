@@ -263,6 +263,45 @@ for i in range(len(M)-1):
             R.append(x + y)
 print(len(R), max(R))"""
 
+
+
+"""M = [int(x) for x in open('files/17_13088.txt')]
+A = [x for x in M if len(str(abs(x))) == 4]
+B = [x for x in M if x % 100 == 17]
+C = [x for x in M if x % 5 == 0]
+R = []
+for i in range(len(M)-2):
+    x, y, z = M[i], M[i+1], M[i+2]
+    if (x in A) + (y in A) + (z in A) == 2:
+        if (x in C) + (y in C) + (z in C) >=  1:
+            if (x + y + z) > max(B):
+                R.append(x + y + z)
+print (len(R), max(R))"""
+
+
+"""M = [int(x) for x in open('files/17_11949.txt')]
+A = [x for x in M if len(str(abs(x))) == 2]
+B = [x for x in M if x % 100 == 68]
+R = []
+for i in range(len(M)-3):
+    x, y, z, w = M[i], M[i+1], M[i+2], M[i+3]
+    if (x in A) + (y in A) + (z in A) + (w in A) == 1 or (x in A) + (y in A) + (z in A) + (w in A) == 4:
+        if (x + y + z + w) >= max(B):
+            R.append(x + y + z + w)
+print (len(R), max(R))"""
+
+
+"""M = [int(x) for x in open('files/17_11838.txt')]
+A = [x for x in M if len(str(abs(x))) == 5]
+B = [x for x in M if x % 100 == 50]
+R = []
+for i in range(len(M)-2):
+    x, y, z = M[i], M[i+1], M[i+2]
+    if (x in A) + (y in A) + (z in A) == 3 and x != y and x != z and y != z:
+            if (x + y + z) <= max(B):
+                R.append(x + y + z)
+print (len(R), max(R))"""
+
 # Домашка 17 номер: https://stepik.org/lesson/1038775/step/1?unit=1062778
 
 # Практика 17 номер: https://stepik.org/lesson/1228675/step/1?unit=1242208
